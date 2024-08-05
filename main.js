@@ -88,11 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (objEvento) => {
     objEvento.preventDefault();
     const busqueda = search.value.trim();
-    let url = `https://api.unsplash.com/search/photos?query=${busqueda}&client_id=${
-      import.meta.env.VITE_API_KEY
-    }&per_page=20`;
-
-    console.log(url);
+    let url = `https://api.unsplash.com/search/photos?query=${busqueda}&client_id=${import.meta.env.VITE_API_KEY}&per_page=20`;
+    // console.log(url);
     if (busqueda) {
       obtenerFotos();
       async function obtenerFotos() {
